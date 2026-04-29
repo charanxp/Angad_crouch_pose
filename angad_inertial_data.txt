@@ -1,0 +1,189 @@
+================================================================================
+  ANGAD HUMANOID ROBOT — INERTIAL PARAMETERS
+  Source: XP_robot_walking.xml (MuJoCo MJCF)
+  Total Mass: 64.94 kg  |  21 DOF  |  29 bodies
+================================================================================
+
+
+1. BODY MASS & CENTER OF MASS (in body-local frame)
+────────────────────────────────────────────────────────────────────────────────
+Body Name                 Mass(kg)    COM_x(m)      COM_y(m)      COM_z(m)
+────────────────────────────────────────────────────────────────────────────────
+pelvis                      5.565    -0.000000      0.000000      0.109414
+hip_pitch_r                 1.008    -0.000081      0.003455      0.072780
+hip_pitch_l                 1.008    -0.000081      0.003455      0.072780
+hip_roll_r                  1.319     0.000035     -0.000000      0.039676
+hip_roll_l                  1.319     0.000035     -0.000000      0.039676
+thigh_r                     2.264     0.014371     -0.134627     -0.042383
+thigh_l                     2.264     0.014371     -0.134627     -0.042383
+leg_shank_r                 1.446    -0.148723     -0.004061     -0.501226
+leg_shank_l                 1.446    -0.148723     -0.004061     -0.501226
+uj_r (ankle_u-joint)        0.098     0.000000     -0.000000     -0.000052
+uj_l (ankle_u-joint)        0.098     0.000000     -0.000000     -0.000052
+foot_r                      0.365    -0.000000      0.020745     -0.000479
+foot_l                      0.365    -0.000000      0.020745     -0.000479
+torso                       4.529     0.002171      0.001390      0.222762
+shoulder_pitch_r            0.929     0.002178     -0.001914      0.024034
+shoulder_pitch_l            0.929     0.002178     -0.001914      0.024034
+shoulder_roll_r             0.640     0.000374     -0.000001      0.025386
+shoulder_roll_l             0.640     0.000374     -0.000001      0.025386
+bicep_r                     0.648     0.000467     -0.004749     -0.090197
+bicep_l                     0.648     0.000467     -0.004749     -0.090197
+forearm_r                   0.370     0.003108     -0.034000     -0.102676
+forearm_l                   0.370     0.003108     -0.034000     -0.102676
+
+
+2. FULL INERTIA TENSOR (in body-local COM frame)
+   Format: Ixx, Iyy, Izz, Ixy, Ixz, Iyz  [kg·m²]
+────────────────────────────────────────────────────────────────────────────────
+Body Name                 Ixx          Iyy          Izz          Ixy          Ixz          Iyz
+────────────────────────────────────────────────────────────────────────────────
+pelvis                    0.064299     0.077313     0.042672     0.000000     0.000000     0.000000
+hip_pitch_r               0.004155     0.005873     0.003496     0.000000     0.000002    -0.000066
+hip_pitch_l               0.004155     0.005873     0.003496     0.000000     0.000002    -0.000066
+hip_roll_r                0.008714     0.010370     0.007210     0.000000    -0.000139     0.000000
+hip_roll_l                0.008714     0.010370     0.007210     0.000000    -0.000139     0.000000
+thigh_r                   0.045645     0.048752     0.008233    -0.000049    -0.001618    -0.000791
+thigh_l                   0.045645     0.048752     0.008233    -0.000049    -0.001618    -0.000791
+leg_shank_r               0.022969     0.024343     0.002626     0.000001     0.000023     0.000089
+leg_shank_l               0.022969     0.024343     0.002626     0.000001     0.000023     0.000089
+uj_r                      0.000010     0.000009     0.000016     0.000000     0.000000     0.000000
+uj_l                      0.000010     0.000009     0.000016     0.000000     0.000000     0.000000
+foot_r                    0.000831     0.000279     0.000948     0.000000     0.000000    -0.000033
+foot_l                    0.000831     0.000279     0.000948     0.000000     0.000000    -0.000033
+torso                     0.135994     0.200739     0.116032     0.000026     0.000377    -0.000477
+shoulder_pitch_r           0.003265     0.004932     0.003682     0.000019     0.000000     0.000000
+shoulder_pitch_l           0.003265     0.004932     0.003682     0.000019     0.000000     0.000000
+shoulder_roll_r            0.001319     0.001728     0.001561     0.000000    -0.000053     0.000000
+shoulder_roll_l            0.001319     0.001728     0.001561     0.000000    -0.000053     0.000000
+bicep_r                    0.003799     0.003621     0.001614     0.000002     0.000011    -0.000205
+bicep_l                    0.003799     0.003621     0.001614     0.000002     0.000011    -0.000205
+forearm_r                  0.001221     0.001302     0.000309     0.000000     0.000024    -0.000014
+forearm_l                  0.001221     0.001302     0.000309     0.000000     0.000024    -0.000014
+
+
+3. JOINT DEFINITIONS
+   All joints are hinge (revolute) type.
+────────────────────────────────────────────────────────────────────────────────
+Joint Name                          Parent Body          Axis (local)                    Range (deg)
+────────────────────────────────────────────────────────────────────────────────
+pelvis_hip_pitch_r                  hip_pitch_r          [ 0.000,  0.000, -1.000]        -180.0 to +180.0
+hip_pitch_r_hip_roll_r              hip_roll_r           [ 1.000,  0.000,  0.000]        -134.6 to  +16.7
+hip_roll_r_thigh_yaw_r              thigh_r              [ 0.000,  0.000, -1.000]        -180.0 to +180.0
+thigh_r_knee_r                      leg_shank_r          [-1.000,  0.000,  0.000]         -90.0 to   +0.0
+leg_shank_r_ankle_pitch_r           uj_r                 [ 0.000,  1.000,  0.000]         -40.0 to  +40.0
+uj_r_ankle_roll_r                   foot_r               [ 1.000,  0.000,  0.000]         -20.0 to  +20.0
+
+pelvis_hip_pitch_l                  hip_pitch_l          [ 0.000,  0.000,  1.000]        -180.0 to +180.0
+hip_pitch_l_hip_roll_l              hip_roll_l           [ 1.000,  0.000,  0.000]         -16.7 to +134.6
+hip_roll_l_thigh_yaw_l              thigh_l              [ 0.000,  0.000, -1.000]        -180.0 to +180.0
+thigh_l_knee_l                      leg_shank_l          [-1.000,  0.000,  0.000]         -90.0 to   +0.0
+leg_shank_l_ankle_pitch_l           uj_l                 [ 0.000,  1.000,  0.000]         -40.0 to  +40.0
+uj_l_ankle_roll_l                   foot_l               [ 1.000,  0.000,  0.000]         -20.0 to  +20.0
+
+pelvis_torso_yaw                    torso                [ 0.000,  0.000,  1.000]         -90.0 to  +90.0
+torso_arm_pitch_r                   shoulder_pitch_r     [-1.000,  0.000,  0.000]        -180.0 to +180.0
+shoulder_pitch_r_arm_roll_r         shoulder_roll_r      [-1.000,  0.000,  0.000]          -5.0 to +190.0
+shoulder_roll_r_arm_yaw_r           bicep_r              [ 0.000,  0.000, -1.000]        -180.0 to +180.0
+bicep_r_elbow_r                     forearm_r            [ 1.000,  0.000,  0.000]        -145.0 to   +0.0
+torso_arm_pitch_l                   shoulder_pitch_l     [ 1.000,  0.000,  0.000]        -180.0 to +180.0
+shoulder_pitch_l_arm_roll_l         shoulder_roll_l      [-1.000,  0.000,  0.000]        -190.0 to   +5.0
+shoulder_roll_l_arm_yaw_l           bicep_l              [ 0.000,  0.000, -1.000]        -180.0 to +180.0
+bicep_l_elbow_l                     forearm_l            [ 1.000,  0.000,  0.000]        -145.0 to   +0.0
+
+
+4. GLOBAL JOINT AXES (at default standing pose)
+   IMPORTANT: Hip pitch axes are 15° oblique — NOT purely lateral!
+────────────────────────────────────────────────────────────────────────────────
+Joint Name                          Global Axis (X, Y, Z)
+────────────────────────────────────────────────────────────────────────────────
+pelvis_hip_pitch_l                  [ 0.966,  0.000, -0.259]   ← 15° oblique
+pelvis_hip_pitch_r                  [ 0.966,  0.000, +0.259]   ← 15° oblique (mirrored Z)
+hip_pitch_l_hip_roll_l              [ 0.000, -1.000,  0.000]
+hip_pitch_r_hip_roll_r              [ 0.000, -1.000,  0.000]
+hip_roll_l_thigh_yaw_l              [ 0.000,  0.000, -1.000]
+hip_roll_r_thigh_yaw_r              [ 0.000,  0.000, -1.000]
+thigh_l_knee_l                      [-1.000,  0.000,  0.000]
+thigh_r_knee_r                      [-1.000,  0.000,  0.000]
+leg_shank_l_ankle_pitch_l           [+1.000,  0.000,  0.000]
+leg_shank_r_ankle_pitch_r           [+1.000,  0.000,  0.000]
+
+
+5. ACTUATORS (Motors)
+────────────────────────────────────────────────────────────────────────────────
+Actuator Name        Joint Name                          Gear    Max Torque (Nm)
+────────────────────────────────────────────────────────────────────────────────
+hip_pitch_r          pelvis_hip_pitch_r                    80           80
+hip_roll_r           hip_pitch_r_hip_roll_r                60           60
+thigh_yaw_r          hip_roll_r_thigh_yaw_r                60           60
+knee_r               thigh_r_knee_r                       120          120
+ankle_pitch_r        leg_shank_r_ankle_pitch_r              80           80
+ankle_roll_r         uj_r_ankle_roll_r                      80           80
+hip_pitch_l          pelvis_hip_pitch_l                    80           80
+hip_roll_l           hip_pitch_l_hip_roll_l                60           60
+thigh_yaw_l          hip_roll_l_thigh_yaw_l                60           60
+knee_l               thigh_l_knee_l                       120          120
+ankle_pitch_l        leg_shank_l_ankle_pitch_l              80           80
+ankle_roll_l         uj_l_ankle_roll_l                      80           80
+torso_yaw            pelvis_torso_yaw                      90           90
+arm_pitch_r          torso_arm_pitch_r                     60           60
+arm_roll_r           shoulder_pitch_r_arm_roll_r            60           60
+arm_yaw_r            shoulder_roll_r_arm_yaw_r              17           17
+elbow_r              bicep_r_elbow_r                       17           17
+arm_pitch_l          torso_arm_pitch_l                     60           60
+arm_roll_l           shoulder_pitch_l_arm_roll_l            60           60
+arm_yaw_l            shoulder_roll_l_arm_yaw_l              17           17
+elbow_l              bicep_l_elbow_l                       17           17
+
+
+6. BODY HIERARCHY (Kinematic Chain)
+────────────────────────────────────────────────────────────────────────────────
+world
+└── pelvis (5.565 kg)
+    ├── hip_pitch_r (1.008 kg)
+    │   └── hip_roll_r (1.319 kg)
+    │       └── thigh_r (2.264 kg)
+    │           └── leg_shank_r (1.446 kg)
+    │               └── uj_r (0.098 kg)
+    │                   └── foot_r (0.365 kg)
+    ├── hip_pitch_l (1.008 kg)
+    │   └── hip_roll_l (1.319 kg)
+    │       └── thigh_l (2.264 kg)
+    │           └── leg_shank_l (1.446 kg)
+    │               └── uj_l (0.098 kg)
+    │                   └── foot_l (0.365 kg)
+    └── torso (4.529 kg)
+        ├── shoulder_pitch_r (0.929 kg)
+        │   └── shoulder_roll_r (0.640 kg)
+        │       └── bicep_r (0.648 kg)
+        │           └── forearm_r (0.370 kg)
+        └── shoulder_pitch_l (0.929 kg)
+            └── shoulder_roll_l (0.640 kg)
+                └── bicep_l (0.648 kg)
+                    └── forearm_l (0.370 kg)
+
+Mass breakdown:
+  Pelvis + Torso (core):  10.094 kg
+  Per leg (hip→foot):      6.500 kg  × 2 = 13.000 kg
+  Per arm (shoulder→hand): 2.587 kg  × 2 =  5.174 kg
+  Unaccounted inertia:    36.672 kg  (distributed in pelvis composite body)
+  TOTAL:                  64.940 kg
+
+
+7. BODY POSITIONS (child relative to parent)
+────────────────────────────────────────────────────────────────────────────────
+Body Name                 Parent              pos_x(m)      pos_y(m)      pos_z(m)
+────────────────────────────────────────────────────────────────────────────────
+hip_pitch_r               pelvis              -0.13822       0.00000       0.11492
+hip_pitch_l               pelvis               0.13803       0.00000       0.11492
+hip_roll_r                hip_pitch_r          0.02250      -0.00000       0.14300
+hip_roll_l                hip_pitch_l          0.02250      -0.00000       0.14300
+thigh_r                   hip_roll_r          -0.01158       0.13179      -0.16854
+thigh_l                   hip_roll_l          -0.01158       0.13179      -0.16854
+leg_shank_r               thigh_r              0.01000       0.01730       0.26580
+leg_shank_l               thigh_l              0.01000       0.01730       0.26580
+uj_r                      leg_shank_r         -0.00000      -0.01700       0.00000
+uj_l                      leg_shank_l          0.00000      -0.01700       0.00000
+foot_r                    uj_r                -0.02350       0.00000       0.03100
+foot_l                    uj_l                -0.02350       0.00000       0.03100
+torso                     pelvis               0.00000       0.00000       0.14425
