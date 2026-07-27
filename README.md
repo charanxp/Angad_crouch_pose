@@ -96,7 +96,7 @@ We ran a systematic sweep across all crouch depths (1–20 cm) and found the sta
 ## 📁 Repository Structure
 
 ```
-angad_crouch_final/
+Angad_crouch_pose/
 ├── angad_crouch_final.py      # Main script — run this to see the crouch
 ├── angad_oblique_ik.py        # 6-DOF IK solver for computing crouch angles
 ├── angad_robot_params.py      # All robot parameters (importable Python module)
@@ -143,8 +143,8 @@ angad_crouch_final/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Charan-mdnl/angad_crouch_final.git
-cd angad_crouch_final
+git clone https://github.com/charanxp/Angad_crouch_pose.git
+cd Angad_crouch_pose
 
 # Install dependencies
 pip install mujoco numpy scipy
